@@ -2,7 +2,6 @@ package auth
 
 import (
 	"errors"
-	"fmt"
 	"net/http"
 	"strings"
 )
@@ -21,9 +20,4 @@ func GetAPIKey(headers http.Header) (string, error) {
 	}
 
 	return splitAuth[1], nil
-}
-
-// unusedFunction is an intentionally unused function to test staticcheck
-func unusedFunction() {
-	fmt.Println("This function is unused and should be caught by staticcheck")
 }
