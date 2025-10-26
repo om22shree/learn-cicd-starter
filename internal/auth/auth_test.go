@@ -23,8 +23,8 @@ func TestGetAPIKey(t *testing.T) {
 			expectedError: "",
 		},
 		{
-			name: "no authorization header",
-			headers: http.Header{},
+			name:          "no authorization header",
+			headers:       http.Header{},
 			expectedKey:   "",
 			expectedError: "no authorization header included",
 		},
